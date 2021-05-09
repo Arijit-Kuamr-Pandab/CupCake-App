@@ -38,35 +38,53 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <RadioButton
-                    android:id="@+id/option0"
+                    android:id="@+id/sun"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Thursday" />
+                    android:text="@string/sunday" />
 
                 <RadioButton
-                    android:id="@+id/option1"
+                    android:id="@+id/mon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Friday" />
+                    android:text="@string/monday" />
 
                 <RadioButton
-                    android:id="@+id/option2"
+                    android:id="@+id/tue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Saturday" />
+                    android:text="@string/tuesday" />
 
                 <RadioButton
-                    android:id="@+id/option3"
+                    android:id="@+id/wed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Sunday" />
+                    android:text="@string/wednesday" />
+
+                <RadioButton
+                    android:id="@+id/thu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/thursday" />
+
+                <RadioButton
+                    android:id="@+id/fri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/friday" />
+
+                <RadioButton
+                    android:id="@+id/sat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/saturday" />
             </RadioGroup>
 
             <View
                 android:id="@+id/divider"
                 style="@style/Widget.Cupcake.Divider"
                 android:layout_width="0dp"
-                android:layout_height="1dp"
+                android:layout_height="2dp"
                 android:layout_marginTop="@dimen/side_margin"
                 android:layout_marginBottom="@dimen/side_margin"
                 app:layout_constraintEnd_toEndOf="parent"
