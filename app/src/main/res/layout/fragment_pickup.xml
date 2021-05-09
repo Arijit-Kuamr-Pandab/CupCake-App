@@ -44,46 +44,32 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <RadioButton
-                    android:id="@+id/sun"
+                    android:id="@+id/option0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/sunday" />
+                    tools:text="Thursday"
+                    android:text="@{viewModel.getOrderDate[0]}"/>
 
                 <RadioButton
-                    android:id="@+id/mon"
+                    android:id="@+id/option1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/monday" />
+                    tools:text="Friday"
+                    android:text="@{viewModel.getOrderDate[1]}"/>
 
                 <RadioButton
-                    android:id="@+id/tue"
+                    android:id="@+id/option2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tuesday" />
+                    tools:text="Saturday"
+                    android:text="@{viewModel.getOrderDate[2]}"/>
 
                 <RadioButton
-                    android:id="@+id/wed"
+                    android:id="@+id/option3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/wednesday" />
-
-                <RadioButton
-                    android:id="@+id/thu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/thursday" />
-
-                <RadioButton
-                    android:id="@+id/fri"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/friday" />
-
-                <RadioButton
-                    android:id="@+id/sat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/saturday" />
+                    tools:text="Sunday"
+                    android:text="@{viewModel.getOrderDate[3]}"/>
             </RadioGroup>
 
             <View
