@@ -30,4 +30,8 @@ class OrderViewModel: ViewModel() {
         _pickUpDate.value = pickupDate
     }
 
+    fun hasNoFlavorSet(): Boolean{
+        return _cupCakeFlavor.value.isNullOrBlank()
+    }
+
 }
