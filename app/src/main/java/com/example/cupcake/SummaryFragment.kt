@@ -42,8 +42,10 @@ class SummaryFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         val fragmentBinding = FragmentSummaryBinding.inflate(inflater, container, false)
         binding = fragmentBinding
+
         return fragmentBinding.root
     }
 
@@ -51,7 +53,13 @@ class SummaryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
+
+            // lifecycleOwner for LiveData
+            lifecycleOwner = viewLifecycleOwner
+
             sendButton.setOnClickListener { sendOrder() }
+
+            // initialized in layout file
             viewModel = sharedViewModel
         }
     }

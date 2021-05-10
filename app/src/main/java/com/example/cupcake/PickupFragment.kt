@@ -42,8 +42,10 @@ class PickupFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         val fragmentBinding = FragmentPickupBinding.inflate(inflater, container, false)
         binding = fragmentBinding
+
         return fragmentBinding.root
     }
 
@@ -51,7 +53,13 @@ class PickupFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
+
+            // lifecycleOwner for LiveData
+            lifecycleOwner = viewLifecycleOwner
+
             nextButton.setOnClickListener { goToNextScreen() }
+
+            // initialized in layout file
             viewModel = sharedViewModel
         }
     }

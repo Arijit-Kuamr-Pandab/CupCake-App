@@ -42,8 +42,10 @@ class FlavorFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         val fragmentBinding = FragmentFlavorBinding.inflate(inflater, container, false)
         binding = fragmentBinding
+
         return fragmentBinding.root
     }
 
@@ -51,8 +53,14 @@ class FlavorFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
-            nextButton.setOnClickListener { goToNextScreen() }
+
+            // lifecycleOwner for LiveData
+            lifecycleOwner =viewLifecycleOwner
+
+            // initialized in layout file
             viewModel = sharedViewModel
+
+            flavorFragment = this@FlavorFragment
         }
     }
 
