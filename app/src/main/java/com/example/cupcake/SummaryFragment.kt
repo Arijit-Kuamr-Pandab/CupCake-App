@@ -57,10 +57,10 @@ class SummaryFragment : Fragment() {
             // lifecycleOwner for LiveData
             lifecycleOwner = viewLifecycleOwner
 
-            sendButton.setOnClickListener { sendOrder() }
-
             // initialized in layout file
             viewModel = sharedViewModel
+
+            summaryFragment = this@SummaryFragment
         }
     }
 

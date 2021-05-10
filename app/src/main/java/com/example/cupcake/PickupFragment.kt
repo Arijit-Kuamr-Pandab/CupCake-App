@@ -57,10 +57,10 @@ class PickupFragment : Fragment() {
             // lifecycleOwner for LiveData
             lifecycleOwner = viewLifecycleOwner
 
-            nextButton.setOnClickListener { goToNextScreen() }
-
             // initialized in layout file
             viewModel = sharedViewModel
+
+            pickupFragment = this@PickupFragment
         }
     }
 
