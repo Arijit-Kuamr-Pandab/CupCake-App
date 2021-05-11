@@ -81,4 +81,15 @@ class SummaryFragment : Fragment() {
         binding = null
     }
 
+    /**
+     * This function is used to cancel the order.
+     */
+    fun cancelOrder() {
+
+        // Reset the Order details.
+        sharedViewModel.resetOrder()
+
+        // Navigate from Summary fragment to Start fragment.
+        findNavController().navigate(R.id.action_summaryFragment_to_startFragment)
+    }
 }

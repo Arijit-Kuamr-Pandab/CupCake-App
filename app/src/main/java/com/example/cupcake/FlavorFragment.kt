@@ -80,4 +80,16 @@ class FlavorFragment : Fragment() {
         super.onDestroyView()
         binding = null
     }
+
+    /**
+     * This function is used to cancel the order.
+     */
+    fun cancelOrder() {
+
+        // Reset the order details.
+        sharedViewModel.resetOrder()
+
+        // Navigate to start fragment.
+        findNavController().navigate(R.id.action_flavorFragment_to_startFragment)
+    }
 }
