@@ -17,6 +17,7 @@ package com.example.cupcake
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 
@@ -24,6 +25,9 @@ import androidx.navigation.ui.setupActionBarWithNavController
  * Activity for cupcake order flow.
  */
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
+
+    private lateinit var navController: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -31,7 +35,15 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
          * The below section of code is used to setup navigation bar
          */
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-        val navController = navHostFragment.navController
+        navController = navHostFragment.navController
         setupActionBarWithNavController(navController)
+
+    }
+
+    /**
+     * Handle navigation back when the user clicks on left arrow from the action bar.
+     */
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }

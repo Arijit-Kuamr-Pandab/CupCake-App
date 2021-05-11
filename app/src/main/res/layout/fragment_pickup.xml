@@ -51,6 +51,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:text="Thursday"
+                    android:checked="@{viewModel.pickUpDate.equals(viewModel.getOrderDate[0])}"
                     android:text="@{viewModel.getOrderDate[0]}"
                     android:onClick="@{() -> viewModel.setDate(viewModel.getOrderDate[0])}"/>
 
@@ -59,6 +60,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:text="Friday"
+
+                    android:checked="@{viewModel.pickUpDate.equals(viewModel.getOrderDate[1])}"
                     android:text="@{viewModel.getOrderDate[1]}"
                     android:onClick="@{() -> viewModel.setDate(viewModel.getOrderDate[1])}"/>
 
@@ -67,6 +70,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:text="Saturday"
+
+                    android:checked="@{viewModel.pickUpDate.equals(viewModel.getOrderDate[2])}"
                     android:text="@{viewModel.getOrderDate[2]}"
                     android:onClick="@{() -> viewModel.setDate(viewModel.getOrderDate[2])}"/>
 
@@ -75,6 +80,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:text="Sunday"
+
+                    android:checked="@{viewModel.pickUpDate.equals(viewModel.getOrderDate[3])}"
                     android:text="@{viewModel.getOrderDate[3]}"
                     android:onClick="@{() -> viewModel.setDate(viewModel.getOrderDate[3])}"/>
             </RadioGroup>

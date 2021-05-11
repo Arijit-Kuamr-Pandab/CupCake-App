@@ -75,7 +75,7 @@ class OrderViewModel: ViewModel() {
 
     fun resetOrder() {
         _orderQuantity.value = 0
-        _pickUpDate.value = ""
+        _pickUpDate.value = getOrderDate[1]
         _cupCakeFlavor.value = ""
         _price.value = 0.0
     }

@@ -52,6 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/vanilla"
+
                     android:checked="@{viewModel.cupCakeFlavor.equals(@string/vanilla)}"
                     android:onClick="@{() -> viewModel.setFlavor(@string/vanilla)}"/>
 
@@ -60,6 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/chocolate"
+
                     android:checked="@{viewModel.cupCakeFlavor.equals(@string/chocolate)}"
                     android:onClick="@{() -> viewModel.setFlavor(@string/chocolate)}"/>
 
@@ -68,6 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/red_velvet"
+
                     android:checked="@{viewModel.cupCakeFlavor.equals(@string/red_velvet)}"
                     android:onClick="@{() -> viewModel.setFlavor(@string/red_velvet)}"/>
 
@@ -76,6 +79,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/salted_caramel"
+
                     android:checked="@{viewModel.cupCakeFlavor.equals(@string/salted_caramel)}"
                     android:onClick="@{() -> viewModel.setFlavor(@string/salted_caramel)}"/>
 
@@ -84,6 +88,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/coffee"
+
                     android:checked="@{viewModel.cupCakeFlavor.equals(@string/coffee)}"
                     android:onClick="@{() -> viewModel.setFlavor(@string/coffee)}"/>
             </RadioGroup>
